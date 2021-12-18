@@ -48,7 +48,6 @@ export default {
     onFileSlected(event){
       let files = event.target.files;
       for(let i =0; i<files.length; i++){
-
         let imageSrc= (window.URL || window.webkitURL).createObjectURL(files[i]);
           this.selectedImages.push({'name':files[i].name,'src': imageSrc} )
       }
