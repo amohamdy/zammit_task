@@ -55,7 +55,7 @@
                     <span>EGP {{margin}}</span>
                 </div>
                 <div class="d-flex flex-column">
-                    <span>profit</span>
+                    <span>Profit</span>
                     <span>EGP {{profit}}</span>
 
                 </div>
