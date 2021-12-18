@@ -1,7 +1,7 @@
 <template>
        <div class="form-group d-flex">
             <label for="description" class="mb-2">Description</label>
-            <textarea :value="desc" placeholder="Description"  id="description" rows="5"  class="form-control"></textarea>
+            <textarea :value="modelValue" placeholder="Description"  id="description" rows="5"  class="form-control" @input="$emit('update:modelValue', $event.target.value)"></textarea>
         </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
 
         }
     },
-    props:['desc'],
+    props:['modelValue'],
 
 }
 </script>

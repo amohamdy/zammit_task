@@ -29,14 +29,14 @@
         <hr/>
         <h3 class="mb-4 text-left">QUANTITY</h3>
             <div class="text-input-wrapper">
-                <TextInput placeholder="0" label="Available" number="true" :quantity="this.quantity"/>
+                <TextInput placeholder="0" label="Available" number="true" v-model="quantity"/>
             </div>
 
     </div>
 <!-- second card -->
     <div class="form-wrapper card">
-        <TextInput placeholder="Title" label="Title" :title="this.productName"/>
-        <TextArea :desc="this.description"/>
+        <TextInput placeholder="Title" label="Title" v-model="productName"/>
+        <TextArea v-model="description"/>
     </div>
 
 <!-- third card -->
@@ -44,17 +44,17 @@
         <h3 class="mb-4 text-left">Pricing</h3>
         <div class="d-flex">
             <div class="text-input-wrapper">
-                <TextInput placeholder="" label="Price" pricing="true" :price="this.price"/>
+                <TextInput placeholder="" label="Price" pricing="true" v-model="price"/>
             </div>
             <div class="text-input-wrapper">
-                <TextInput placeholder="" label="Compare at price" pricing="true" :price="this.compare_at_price"/>
+                <TextInput placeholder="" label="Compare at price" pricing="true" v-model="compare_at_price"/>
             </div>
         </div>
         <hr>
 
         <div class="d-flex align-items-center">
             <div class="text-input-wrapper">
-                <TextInput placeholder="" label="Cost per item" pricing="true" :price="this.cost_per_item"/>
+                <TextInput placeholder="" label="Cost per item" pricing="true" v-model="cost_per_item"/>
             </div>
             <div class="text-input-wrapper d-flex">
                 <div class="d-flex flex-column">
@@ -80,9 +80,6 @@
 
     </div>
     </div>
-
-
-
 
 </template>
 

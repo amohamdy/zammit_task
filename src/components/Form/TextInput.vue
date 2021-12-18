@@ -1,12 +1,12 @@
 <template>
         <div class="form-group d-flex">
-            <label for="title" class="mb-2 text-left" >{{label}}
-                <input  v-if="number" :value="quantity" :placeholder="placeholder" id="title" class="form-control" type="number"/>
+            <label  class="mb-2 text-left" >{{label}}
+                <input  v-if="number" :value="modelValue" :placeholder="placeholder"  class="form-control" type="number" @input="$emit('update:modelValue', $event.target.value)"/>
                 <span v-else-if="pricing" class="d-flex form-control custom">
                     EGP
-                    <input :value="price" :placeholder="placeholder" id="price" />
+                    <input :value="modelValue" :placeholder="placeholder" @input="$emit('update:modelValue', $event.target.value)"/>
                 </span>
-                <input v-else :value="title" :placeholder="placeholder" id="title" class="form-control"/>
+                <input v-else :value="modelValue" :placeholder="placeholder"  class="form-control" @input="$emit('update:modelValue', $event.target.value)"/>
 
             </label>
 
@@ -21,7 +21,7 @@
     export default{
          name: 'TextInput',
 
-         props:['placeholder', 'label', 'number', 'pricing', 'title', 'quantity', 'price'],
+         props:['placeholder', 'label', 'number', 'pricing', 'modelValue'],
     }
 </script>
 
