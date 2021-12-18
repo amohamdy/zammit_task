@@ -24,14 +24,11 @@
 
         </div>
 
-
-
         <hr/>
         <h3 class="mb-4 text-left">QUANTITY</h3>
             <div class="text-input-wrapper">
                 <TextInput placeholder="0" label="Available" number="true" v-model="quantity"/>
             </div>
-
     </div>
 <!-- second card -->
     <div class="form-wrapper card">
@@ -94,7 +91,6 @@ import TextArea from './Form/TextArea.vue';
          components:{
             TextInput,
             TextArea,
-            // CheckBox
          },
 
         data(){
@@ -125,13 +121,10 @@ import TextArea from './Form/TextArea.vue';
                     this.price=res.data.price;
                     this.compare_at_price=res.data.compare_at_price;
                     this.cost_per_item=res.data.cost_per_item
-
                 }).catch(err=>console.log(err))
             },
          },
         mounted() {
-
-
             this.getIntialFormData()
         }
 

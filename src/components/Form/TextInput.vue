@@ -20,7 +20,6 @@
 <script>
     export default{
          name: 'TextInput',
-
          props:['placeholder', 'label', 'number', 'pricing', 'modelValue'],
     }
 </script>

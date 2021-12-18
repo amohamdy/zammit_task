@@ -1,5 +1,6 @@
 <template>
      <div class="upload-image-wrapper card">
+       <!-- header -->
       <div class="upload-image-wrapper__head" v-if="checkedImages.length>0">
         <h3 >{{checkedImages.length+' ' +'Media Selected'}}</h3>
          <a class="custom" @click="onDelete">Delete Files</a>
@@ -25,7 +26,6 @@
       </div>
 
       <!-- upload btn -->
-
       <div class="upload-image-wrapper__btn" :class="selectedImages.length>0?'custom':''">
         <img alt="Vue logo" src="../assets/download.png">
         <label for="upload-file">

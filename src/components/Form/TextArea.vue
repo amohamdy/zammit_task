@@ -9,11 +9,6 @@
 <script>
 export default {
     name:'TextArea',
-    data(){
-        return{
-
-        }
-    },
     props:['modelValue'],
 
 }
