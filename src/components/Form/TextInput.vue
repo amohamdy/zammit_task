@@ -1,5 +1,5 @@
 <template>
-        <div class="form-group d-flex">
+        <div class="form-group d-flex flex-column">
             <label  class="mb-2 text-left" >{{label}}
                 <input  v-if="number" :value="modelValue" :placeholder="placeholder"  class="form-control" type="number" @input="$emit('update:modelValue', $event.target.value)"/>
                 <span v-else-if="pricing" class="d-flex form-control custom">
@@ -7,12 +7,8 @@
                     <input :value="modelValue" :placeholder="placeholder" @input="$emit('update:modelValue', $event.target.value)"/>
                 </span>
                 <input v-else :value="modelValue" :placeholder="placeholder"  class="form-control" @input="$emit('update:modelValue', $event.target.value)"/>
-
             </label>
-
         </div>
-
-
 </template>
 
 
@@ -29,7 +25,6 @@
 
 
 .form-group{
-    flex-direction:column;
     label{
        width:100%;
     }
@@ -41,7 +36,6 @@
         align-items: center;
         input{
             border:0;
-
         }
     }
 }

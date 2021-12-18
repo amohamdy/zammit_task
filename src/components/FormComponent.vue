@@ -2,7 +2,7 @@
 <!-- first-card  -->
    <div class="form-wrapper card">
         <h3 class="mb-4 text-left">Inventory</h3>
-        <div class="d-flex">
+        <div class="d-flex justify-content-between">
             <div class="text-input-wrapper">
                 <TextInput placeholder="" label="SKU (Stock Keeping Unit)"/>
             </div>
@@ -10,8 +10,6 @@
                 <TextInput placeholder="" label="Barcode (ISBN, UPC, GTIN, etc.)"/>
             </div>
         </div>
-
-
         <div class="d-flex flex-column">
             <div>
                 <input type="checkbox" id="track_quantity" v-model="track_quantity" checked />
@@ -21,14 +19,12 @@
                 <input type="checkbox" id="selling"  v-model="selling" />
                 <label for="selling">Continue selling when out of stock</label>
             </div>
-
         </div>
-
         <hr/>
         <h3 class="mb-4 text-left">QUANTITY</h3>
-            <div class="text-input-wrapper">
-                <TextInput placeholder="0" label="Available" number="true" v-model="quantity"/>
-            </div>
+        <div class="text-input-wrapper">
+            <TextInput placeholder="0" label="Available" number="true" v-model="quantity"/>
+        </div>
     </div>
 <!-- second card -->
     <div class="form-wrapper card">
@@ -39,7 +35,7 @@
 <!-- third card -->
     <div class="form-wrapper card">
         <h3 class="mb-4 text-left">Pricing</h3>
-        <div class="d-flex">
+        <div class="d-flex justify-content-between">
             <div class="text-input-wrapper">
                 <TextInput placeholder="" label="Price" pricing="true" v-model="price"/>
             </div>
@@ -49,11 +45,11 @@
         </div>
         <hr>
 
-        <div class="d-flex align-items-center">
+        <div class="d-flex align-items-center justify-content-between">
             <div class="text-input-wrapper">
                 <TextInput placeholder="" label="Cost per item" pricing="true" v-model="cost_per_item"/>
             </div>
-            <div class="text-input-wrapper d-flex">
+            <div class="text-input-wrapper d-flex justify-content-between">
                 <div class="d-flex flex-column">
                     <span>Margin</span>
                     <span>EGP {{margin}}</span>
@@ -68,12 +64,10 @@
         </div>
 
 
-    <div class="d-flex flex-column">
+    <div class="d-flex justify-content-start">
 
-        <div>
-            <input type="checkbox" id="change_tax"  v-model="changeTax" checked />
-            <label for="change_tax">Change tax on this product</label>
-        </div>
+        <input type="checkbox" id="change_tax"  v-model="changeTax" checked />
+        <label for="change_tax">Change tax on this product</label>
 
     </div>
     </div>
@@ -135,10 +129,7 @@ import TextArea from './Form/TextArea.vue';
 <style scoped lang="scss">
 @import "../scss/variables.scss";
 
-.d-flex{
-    justify-content: space-between;
 
-}
 .text-input-wrapper{
     width:calc(100% / 2 - 1rem)
 }

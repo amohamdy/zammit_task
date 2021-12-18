@@ -60,4 +60,11 @@ html, body, #app{
 .align-items-center{
   align-items: center;
 }
+.justify-content-start{
+  justify-content: flex-start;
+}
+.justify-content-between{
+justify-content: space-between;
+
+}
 </style>

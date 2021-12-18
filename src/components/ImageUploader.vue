@@ -26,19 +26,17 @@
       </div>
 
       <!-- upload btn -->
-      <div class="upload-image-wrapper__btn" :class="selectedImages.length>0?'custom':''">
-        <img alt="Vue logo" src="../assets/download.png">
-        <label for="upload-file">
-          <input type="file" @Change="onFileSlected" id="upload-file" accept="image/*" multiple>
-          Add Files</label>
-          <span>or drop files to upload</span>
-      </div>
+      <UploadBtn :selectedImages="selectedImages" @selected-files="onFileSlected"/>
+
     </div>
 </template>
 
 <script>
+import UploadBtn from './uploadImages/UploadBtn.vue';
 export default {
   name: 'ImageUploader',
+  components: { UploadBtn },
+
  data() {
     return {selectedImages : [],
     checkedImages:[],
@@ -84,35 +82,7 @@ export default {
       }
     }
   }
-  &__btn{
-    border-radius: 11px;
-    border:1px dashed $blue-100;
-    background-color:$blue-50;
-    height:200px;
-    @include display-flex(column, center,center);
-    &.custom{
-      width:25%;
-      height: 130px;
-      img{
-        display:none;
-      }
-      label{
-        border:0;
-        background-color: transparent;
-      }
-    }
-    label{
-      border:1px solid gray;
-      border-radius: 5px;
-      padding:8px 16px;
-      background-color: $gray-100;
-      margin-bottom:10px;
-    }
-    input[type="file"]{
-      position: absolute;
-      visibility: hidden;
-    }
-  }
+
   &__content{
     height:500px;
     margin-bottom:15px;

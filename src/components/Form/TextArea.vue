@@ -1,5 +1,5 @@
 <template>
-       <div class="form-group d-flex">
+       <div class="form-group d-flex flex-column">
             <label for="description" class="mb-2">Description</label>
             <textarea :value="modelValue" placeholder="Description"  id="description" rows="5"  class="form-control" @input="$emit('update:modelValue', $event.target.value)"></textarea>
         </div>
@@ -15,9 +15,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .d-flex{
-        flex-direction:column
-    }
     textarea{
         resize:none;
     }
