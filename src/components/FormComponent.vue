@@ -106,7 +106,7 @@ import TextArea from './Form/TextArea.vue';
             getIntialFormData(){
                 const url = `https://61bc86bdd8542f00178247d6.mockapi.io/ecommerce/1`;
                 this.axios.get(url).then((res) => {
-                    console.log(res)
+                    // console.log(res)
                     this.description=res.data.description;
                     this.productName = res.data.title;
                     this.quantity = res.data.quantity;
