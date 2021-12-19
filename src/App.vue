@@ -67,4 +67,7 @@ html, body, #app{
 justify-content: space-between;
 
 }
+.ql-snow{
+  width:100%;
+}
 </style>
