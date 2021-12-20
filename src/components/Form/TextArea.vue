@@ -16,12 +16,7 @@ export default {
     components: {
     VueEditor
   },
-  data(){
-      return{
-          description:''
 
-      }
-  }
 
 
 }

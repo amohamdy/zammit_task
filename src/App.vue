@@ -47,7 +47,8 @@ html, body, #app{
     margin-bottom:1.5rem;
   }
   .d-flex{
-    @include display-flex(row,flex-start,flex-start)
+    @include display-flex(row,flex-start,flex-start);
+    flex-wrap: wrap;
 
   }
   .text-left{
